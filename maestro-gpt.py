@@ -7,11 +7,14 @@ from rich.panel import Panel
 from datetime import datetime
 import json
 
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 # Set up the Anthropic API client
-anthropic_client = Anthropic(api_key="YOUR ANTHROPIC API KEY")
+anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
 
 # Set up the OpenAI API client
-openai_client = OpenAI(api_key="YOUR OPENAI API KEY")
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Set the Claude model to use for the sub-agent
 claude_model = "claude-3-opus-20240229"
